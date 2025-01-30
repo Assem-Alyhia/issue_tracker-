@@ -1,0 +1,251 @@
+.LoginD {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    display: flex;
+    direction: ltr;
+    position: relative;
+}
+
+.containerLogin .img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+}
+
+.containerLogin .img-top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerLogin {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.containerLogin .form-section,
+.containerLogin .info-section {
+    width: 100%;
+    padding: 5rem;
+text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.containerLogin .form-section {
+    margin-top: -50px;
+    background-color: #ffffff;
+    border: 1px solid #00000012;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 50%;
+    padding-top: 40px;
+    width: 100%;
+    margin-left: 100px;
+}
+
+.containerLogin .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4b38d3;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.containerLogin .logo img {
+    width: 150px;
+    margin-right: 5px;
+}
+
+.containerLogin .divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0 30px 0;
+}
+
+.containerLogin label {
+    font-size: 12px;
+    font-weight: lighter;
+    color: #333;
+    margin-bottom: 5px;
+text-align: justify; /* لضمان أن الكتابة تكون على اليسار */
+}
+
+.containerLogin label span {
+    color: red;
+    font-weight: bold;
+}
+
+.containerLogin .input-container {
+    position: relative;
+    width: 100%;
+}
+
+.containerLogin input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.containerLogin input[type="email"],
+.containerLogin input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.containerLogin input::placeholder {
+    color: #aaa;
+}
+
+.containerLogin .login-btn {
+    width: 90%;
+    margin-left: 30px;
+    padding: 12px;
+    background-color: #635bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.containerLogin .login-btn:hover {
+    background-color: #4b38d3;
+}
+
+.containerLogin .forgot-password,
+.containerLogin .register {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.containerLogin .forgot-password a,
+.containerLogin .register a {
+    color: #5a50e2;
+    text-decoration: none;
+    font-size: .85rem;
+}
+
+.containerLogin .forgot-password a:hover,
+.containerLogin .register a:hover {
+    text-decoration: underline;
+}
+
+.containerLogin .info-section {
+text-align: justify;
+    margin-top: 50px;
+}
+
+.containerLogin .info-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.containerLogin .info-section p {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.containerLogin .dashboard-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .containerLogin {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .containerLogin .form-section {
+        width: 45%;
+        margin-top: 0;
+    }
+
+    .containerLogin .info-section {
+        width: 50%;
+        margin-top: 80px;
+        padding: 5rem;
+    }
+}
+
+.formInput {
+    margin: 1rem 0;
+    
+}
+.formInput input{
+    padding: 0.7rem;
+    border-radius: 6px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.formInput input:focus{
+    border: 2px solid #454545;
+}
+.formR{
+    font-size: .85rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+.formR a{
+    color: #4b38d3;
+}
+.error-message{
+    color: red;
+    font-size: .8rem;
+    margin: 1rem 0;
+}
+
+
+.input-container {
+    position: relative;
+    display: flex; 
+    align-items: center; 
+  }
+  .input-container input {
+    padding: 0.7rem;
+    border-radius: 6px;
+    width: 100%;
+    border: 1px solid #ccc;
+    font-size: .8rem !important;
+    margin: 0 !important;
+    
+  }
+  
+  .toggle-password-icon {
+    opacity: .7;
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  

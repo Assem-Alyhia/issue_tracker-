@@ -1,0 +1,245 @@
+.RegisterD {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  display: flex;
+  direction: ltr;
+  position: relative;
+}
+
+.containerRegister .img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  z-index: -1;
+}
+
+.containerRegister .img-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.containerRegister {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.containerRegister .form-section,
+.containerRegister .info-section {
+  width: 100%;
+  text-align: left;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.containerRegister .form-section {
+  margin-top: -50px;
+  background-color: #ffffff;
+  border: 1px solid #00000012;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 35%;
+  padding-top: 40px;
+  width: 100%;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+.containerRegister .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4b38d3;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.containerRegister .logo img {
+  width: 150px;
+  margin-right: 5px;
+}
+
+.containerRegister .divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 10px 0 30px 0;
+}
+
+.containerRegister .input-row {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.containerRegister .input-field {
+  background-color: white;
+  border: none;
+  
+  flex: 1;
+}
+
+.containerRegister label {
+  font-size: 12px;
+  font-weight: lighter;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.containerRegister label span {
+  color: red;
+  font-weight: bold;
+}
+
+.containerRegister .input-container {
+  position: relative;
+  width: 100%;
+}
+
+.containerRegister input[type="text"],
+.containerRegister input[type="email"],
+.containerRegister input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #555;
+}
+
+.containerRegister input::placeholder {
+  color: #aaa;
+}
+
+/* .containerRegister .eye-icon {
+  position: absolute;
+  top: 50%;
+  right: -11px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+}
+
+.containerRegister .eye-icon:hover {
+  color: #5a50e2;
+} */
+
+.containerRegister .checkbox-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.containerRegister .checkbox-label {
+  font-size: 12px;
+  color: #333;
+}
+
+.containerRegister .checkbox-label span {
+  color: #1677ff;
+}
+
+.containerRegister .info-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border: 1px solid #665BFF;
+  background-color: #F4F3FF;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.containerRegister .info-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.containerRegister .info-text {
+  font-size: 12px;
+  color: #555;
+}
+
+.containerRegister .register-btn {
+  width: 90%;
+  margin-left: 30px;
+  padding: 12px;
+  border: 1px solid #d9d9d9;
+  background-color: #665BFF;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .5s;
+}
+.containerRegister .register-btn:hover {
+
+  background-color: #4c3fff;
+
+}
+
+.containerRegister .login {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.containerRegister .login a {
+  color: #1677ff;
+  text-decoration: none;
+}
+
+.containerRegister .login a:hover {
+  text-decoration: underline;
+}
+
+.containerRegister .info-section {
+  text-align: left;
+  margin-top: 80px;
+}
+
+.containerRegister .info-section h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.containerRegister .info-section p {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.containerRegister .dashboard-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .containerRegister {
+      flex-direction: row;
+      align-items: flex-start;
+  }
+
+  .containerRegister .form-section {
+      width: 45%;
+      margin-top: 0;
+  }
+
+  .containerRegister .info-section {
+      width: 60%;
+      padding: 5rem;
+  }
+}
