@@ -6,6 +6,11 @@ import Layout from "./layout/layout";
 import ForgetPassword from "./auth/forgetPassword/forgetPassword";
 
 
+import MiniDrawer from "./layout/userDashboard/drawer";
+
+import Accounts_ from "./pages/userDashboard/Accounts";
+
+
 
 
 
@@ -19,6 +24,16 @@ export const routes = [
 
 
 
+export const dashboardRoutes = [
+
+  {
+    path: '/user/dashboard',
+    element: <Accounts_ />,
+  },
+
+]
+
+
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +41,12 @@ export const router = createBrowserRouter([
     element: <Layout />,
     errorElement: <p>not found page</p>,
     children: routes,
+  },
+  {
+    path: "/user/dashboard",
+    element: <MiniDrawer />,
+    errorElement: <p>not found page</p>,
+    children: dashboardRoutes,
   },
   {
     path: '/login',

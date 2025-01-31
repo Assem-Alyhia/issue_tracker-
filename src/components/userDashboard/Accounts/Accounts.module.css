@@ -1,0 +1,460 @@
+
+  .accountHero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 138px;
+    padding: 0 0;
+    border-bottom: 1px solid #dcdcdc;
+    position: relative;
+  }
+ 
+
+  .textBlockTitle {
+    color: #fff;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 0.5;
+    
+
+  }
+  .textBlock{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+ 
+  :root {
+    --offset: 2px;
+  }
+  
+  .buttonContainer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    background: rgb(55, 21, 90);
+    padding: 14px 12px;
+    text-align: center;
+    width: 170px;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    cursor: pointer;
+    height: 40px;
+    
+  }
+  
+  .buttonFree{
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    color: #fff;
+  }
+ 
+  .animatedBackground {
+    content: '';
+    background: conic-gradient(transparent 270deg, rgb(0, 153, 255), transparent);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    animation: rotate 2s linear infinite;
+    z-index: -1;
+  }
+  
+  .innerBlurEffect {
+    content: '';
+    background: rgba(61, 33, 97, 0.61);
+    border-radius: inherit;
+    position: absolute;
+    inset: var(--offset);
+    height: calc(100% - 2 * var(--offset));
+    width: calc(100% - 2 * var(--offset));
+    backdrop-filter: blur(40px);
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+    }
+    to {
+      transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+    }
+  }
+  
+  .textBlockSubtitle {
+    color: #d1d1d1;
+    font-family: Rubik, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+  }
+  
+
+  
+  .btnBlock {
+    display: flex;
+    justify-content: flex-end;
+    width: 45%;
+    gap: 30px;
+
+  }
+
+  .bannerImage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    object-fit: cover;
+    color: transparent;
+    z-index: -1;
+  }
+  .createAccountBtn{
+    min-width: 170px;
+    min-height: 40px;
+    color: #665bff !important;
+    background: #fff !important;
+    border: none !important;
+    outline: none !important;
+    font-weight: 600 !important;
+    font-size: 14px;
+    padding: 4px 15px;
+    border-radius: 6px;
+    height: 32px;
+  }
+  .filterAccountType{
+    padding: 20px 55px 0;
+}
+
+.tabBar {
+  text-align: left;
+    position: relative;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    line-height: 1.5714285714285714;
+    list-style: none;
+margin-top: 1rem;
+  }
+  
+  .tab {
+    text-align: center;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    outline: none;
+    position: relative;
+    font-size: 14px;
+  }
+  
+  .active {
+    color: #2962ff;
+
+    border-bottom:1px solid #2962ff;
+  }
+  
+  .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #2962ff;
+    transition: all 0.3s ease;
+  }
+  
+  .active {
+    color: #2962ff;
+  }
+  
+  .active.active {
+    font-weight: bold;
+  }
+  
+  .indicator.active {
+    left: 0 active ;
+  }
+.selectWrapper{
+  padding: 2rem;
+  width: 65%;
+}
+
+.accountWrapperContent {
+    display: flex;
+    flex-direction: column;
+
+    margin:5rem 2rem ;
+}
+
+.accountWrapperCreateAccount {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 25px;
+    gap: 20px;
+    border-radius: 12px;
+
+}
+.accountListTitle2 {
+    padding-top: 10px;
+}
+
+.accountListTitle2 {
+    font-size: 14px;
+text-align: justify;
+    color: #797979;
+    width: 100%;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.accountWrapper{
+    display: flex;
+}
+  .dashboardImage{
+    width: 5rem;
+    padding: .5rem;
+    background-color: #f0effd;
+
+  }
+  .dashboardImage img {
+    box-shadow: .473293px 0 90.624px rgba(217, 225, 255, .6);
+    border-radius: 3.776px 0 0 3.776px;
+    width: 80%;
+    
+  }
+  
+  
+  .dashboardCard:hover {
+    transform: scale(1.009); 
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); 
+    background: #f0effd;
+    border: 1px solid #665bff;
+  }
+.dashboardCard:hover .dashboardImage img {
+    background-color: #fff; 
+  }
+  
+  
+  .dashboardCard {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 10px 20px;
+    align-items: center;
+    border: 1px solid #d6d6d6;
+    gap: 20px;
+    width: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: none; 
+    justify-content: space-between;
+  }
+  .inCrad{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pCard{
+    margin: 1rem;
+    
+  }
+.emptyState{
+  margin-top: 4rem;
+}
+  .dashboardCard h3 {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 19px;
+    color: #070337;
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+  .accountWrapper .dashboardTour .dashboardCard .activeAccountCard {
+    display: flex;
+    margin-top: 10px;
+    gap: 20px;
+}
+  .dashboardCard span {
+    color: rgb(102, 91, 255);
+    margin: 0px 5px;
+  }
+  
+  .activeAccountCard {
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-top: 8px;
+    
+  }
+  
+  .borderRight {
+    border-right: 1px solid #eee;
+    padding-right: 8px;
+    
+  }
+  
+  .dashboardCard button {
+   
+    height: 45px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 4.337px;
+    background: #e4e2ff;
+    box-shadow: 0 4px 8px 0 hsla(0, 0%, 54%, .11);
+    color: #665bff;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+}
+  
+
+ .borderRight {
+    border: 1px solid #d0cfd3;
+    padding-right: 30px;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+ p {
+    color: #4c4a67;
+    font-size: 12px;
+    font-weight: 500;
+}
+.sliderColumn {
+    width: 30%;
+    padding: 2rem ;
+    position: relative;
+    border-radius: 10px;
+}
+.backgroundImage {
+    background-image: url('/userDashboard/Accounts/offer.png');
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border-radius: 12px !important;
+    width: 100%; 
+    height: 806px; 
+  }
+  @media (min-width: 1024px) {
+    .accountHero {
+      padding: 0 55px;
+    }
+  }
+
+
+
+  @media screen and (max-width: 767px) {
+  .accountHero {
+      padding: 0 30px;
+  }
+  .sliderColumn {
+      max-width: 420px;
+  }
+  .backgroundImage{
+        min-width: 90%;
+    justify-self: center;
+    }
+    .accountWrapper{
+      display: grid;
+  }
+  }
+
+
+    @media (min-width: 1280px) {
+        .accountWrapperCreateAccount {
+            padding: 12px 16px;
+        }
+    }
+    
+  @media (min-width: 1280px) {
+    .accountWrapper {
+        flex-direction: row;
+        align-items: start;
+    }
+}
+@media (min-width: 640px) {
+   .accountWrapperContent {
+        width:70%;
+    }
+}
+   /* Mobile */
+   @media screen and (max-width: 767px) {
+    .btnBlock{
+        width: 50%;
+        display: grid;
+        margin: 1rem;
+        
+    }
+    }
+ 
+
+    /* Mobile */
+    @media screen and (max-width: 767px) {
+        .dashboardCard button{
+       width: 50%;
+        }
+        }
+             /* small Screens */
+@media screen and (min-width: 768px) {
+    .dashboardCard button{
+        width: 60%;
+    }
+    }
+    /* Large Screens */
+@media screen and (min-width: 1024px) {
+    .dashboardCard button{
+        width: 125px;
+    }
+}
+  /* Mobile */
+  @media screen and (max-width: 767px) {
+    .dashboardCard {
+   display: grid;
+   justify-content: flex-start;
+    }
+    }
+                 /* small Screens */
+@media screen and (min-width: 768px) {
+    .dashboardCard {
+        display: block;
+    }
+    }
+        /* Large Screens */
+@media screen and (min-width: 1024px) {
+    .dashboardCard {
+        display: flex;
+    }
+}
+  @media (min-width: 768px) {
+    .textBlockTitle {
+      font-size: 36px;
+    }
+  }
+  @media (min-width: 768px) {
+    .textBlockSubtitle {
+      font-size: 14px;
+    }
+  }
+   
+  @media (min-width: 768px) {
+    .buttonFree {
+      top: -7px;
+    }
+  }
+  
