@@ -6,9 +6,19 @@ import Layout from "./layout/layout";
 import ForgetPassword from "./auth/forgetPassword/forgetPassword";
 
 
+
 import MiniDrawer from "./layout/userDashboard/drawer";
 
 import Accounts_ from "./pages/userDashboard/Accounts";
+
+import Indexissespage from "../src/components/userDashboard/Accounts/Indexissespage";
+import Indexissescard from "./components/userDashboard/Accounts/IndexissesCard";
+
+
+
+
+
+
 
 
 
@@ -31,6 +41,14 @@ export const dashboardRoutes = [
     element: <Accounts_ />,
   },
 
+  {
+    path: "/user/dashboard/issues",
+    element: <Indexissespage />,
+  },
+   {
+    path: "/user/dashboard/issuescard",
+    element: <Indexissescard/>,
+  },
 ]
 
 

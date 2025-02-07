@@ -3,9 +3,10 @@ import styles from './Accounts.module.css';
 import { useState, useEffect } from 'react';
 import { Select, MenuItem, InputLabel, FormControl, IconButton, TextField, Grid } from '@mui/material';
 import { ArrowDropDown as ArrowDropDownIcon } from '@mui/icons-material';
+import IssuesPage from '../../../layout/IssuesPage';
+import ColorModeSwitch from '../../ColorModeSwitch';
 
-
-const Accounts = () => {
+const Indexissespage = () => {
   const [activeStatus, setActiveStatus] = useState('Accepted');
   const [activePlan, setActivePlan] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -39,7 +40,7 @@ const Accounts = () => {
         </div>
       );
     }
-
+  
     return (
       <div className={styles.dashboardTour}>
         {filteredData.map((card) => (
@@ -115,10 +116,12 @@ const Accounts = () => {
         </div>
       </div>
 
-  
+      <div className={styles.issuesSection}>
+      <IssuesPage />
+    </div>
 
     </>
   );
 };
 
-export default Accounts;
+export default Indexissespage;

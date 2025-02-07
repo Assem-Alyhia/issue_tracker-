@@ -24,20 +24,17 @@ const NavBar = () => {
                 <nav className="unique-nav-links">
                     <Link to="/">Home</Link>
                     <div className="unique-dropdown">
-                        <a href="#">Select1 ▾</a>
-                        <div className="unique-dropdown-content">
-                            <Link to="/page1">page1</Link>
-                            <Link to="/page2">page2</Link>
-                            <Link to="/page3">page3</Link>
-                        </div>
+                        <a href="#">About</a>
+                      
                     </div>
-                    <Link to="/page">page</Link>
                     <div className="unique-dropdown">
-                        <a href="#">Select2 ▾</a>
-                        <div className="unique-dropdown-content">
-                            <Link to="/page1">page1</Link>
-                            <Link to="/page2">page2</Link>
-                        </div>
+                        <a href="#">Support</a>
+                       
+                    </div>
+                    
+                    <div className="unique-dropdown">
+                        <a href="#">Contact</a>
+                       
                     </div>
                     <div className="unique-dropdown">
                         <a href="#">More ▾</a>

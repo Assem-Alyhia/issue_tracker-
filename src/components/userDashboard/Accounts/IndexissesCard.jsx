@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react';
 import { Select, MenuItem, InputLabel, FormControl, IconButton, TextField, Grid } from '@mui/material';
 import { ArrowDropDown as ArrowDropDownIcon } from '@mui/icons-material';
 
+import IssuesCard from '../../../layout/IssuesCard';
 
-const Accounts = () => {
+
+const IndexissesCard = () => {
   const [activeStatus, setActiveStatus] = useState('Accepted');
   const [activePlan, setActivePlan] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -115,10 +117,12 @@ const Accounts = () => {
         </div>
       </div>
 
-  
+      <div className={styles.issuesSection}>
+      <IssuesCard/>
+    </div>
 
     </>
   );
 };
 
-export default Accounts;
+export default IndexissesCard;

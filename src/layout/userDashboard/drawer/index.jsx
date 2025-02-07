@@ -29,10 +29,15 @@ import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { useState, useEffect } from 'react';
-import { ExpandLess, ExpandMore } from '@mui/icons-material';
-import { Collapse } from '@mui/material';
+import { ExpandLess, ExpandMore} from '@mui/icons-material';
+import { Collapse} from '@mui/material';
 import { logout } from '../../../api/authApi/logout';
 import Cookies from 'js-cookie';
+import BugReportIcon from "@mui/icons-material/BugReport";  
+import VisibilityIcon from "@mui/icons-material/Visibility"; 
+import ViewModuleIcon from "@mui/icons-material/ViewModule";
+import { Switch } from '@mui/material';
+import ColorModeSwitch from '../../../components/ColorModeSwitch';
 
 const drawerWidth = 240;
 
@@ -103,10 +108,10 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const menuItems = [
     { text: 'Accounts', icon: <DashboardIcon />, url: '/user/dashboard' },
     {
-        text: 'pages', icon: <AnnouncementIcon />, url: '/user/dashboard', children: [
-            { text: 'page1', icon: <BuildIcon />, url: '/user/dashboard' },
-            { text: 'page2', icon: <BuildIcon />, url: '/user/dashboard' },
-            { text: 'page3', icon: <BuildIcon />, url: '/user/dashboard' }
+        text: 'IssuePages', icon: <BugReportIcon />, url: '/user/dashboard', children: [
+            { text: 'DisplayIssues', icon: <VisibilityIcon />, url: '/user/dashboard/issues' },
+            { text: 'DisplyCard', icon: <ViewModuleIcon />, url: '/user/dashboard/issuescard' },
+            // { text: 'page3', icon: <BuildIcon />, url: '/user/dashboard/issuescard' }
         ]
     },
 ];
@@ -216,15 +221,27 @@ export default function MiniDrawer() {
                             <Typography variant="h6" noWrap component="div" sx={{ color: '#000' }}>
                             </Typography>
 
-                            <IconButton onClick={handleProfileMenuOpen} sx={{ marginLeft: "auto"   }}>
+                            {/* <IconButton onClick={handleProfileMenuOpen} sx={{ marginLeft: "auto"   }}>
 
                                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                     <Avatar src={'/userDashboard/Profile/Profile.png'} />
                                     <Typography sx={{ marginLeft: 1, color: '#000' }}>  Aasem Al_Yhia </Typography>
                                     <ExpandMoreIcon sx={{ color: '#000', marginLeft: 1 }} />
+                                
                                 </Box>
+                               
+                            </IconButton> */}
+                            <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%' }}>
+                            <IconButton 
 
+                            >
+                            
+                            <ColorModeSwitch/>
                             </IconButton>
+                             
+                            </div>
+                             
+                          
 
                             <Menu
                                 anchorEl={anchorEl}
@@ -267,34 +284,40 @@ export default function MiniDrawer() {
                     </AppBar>
 
                     <Drawer variant="permanent" open={open} sx={{ position: 'relative !important' }}>
-                        <DrawerHeader>
-
-                            <Box
-                                sx={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    padding: 2,
-                                    width: '6rem',
-                                    margin: 'auto'
-                                }}
-                            >
-                                {open ? (
-                                    <img
-                                        src="/log.png"
-                                        alt="Logo Open"
-                                        style={{
-                                            width: '90%',
-                                            transition: 'width 0.3s',
-                                        }}
-                                    />
-                                ) : (
-                                    ''
-                                )}
-                            </Box>
-                            <IconButton onClick={handleDrawerClose} sx={{ color: '#fff' }}>
-                                {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                            </IconButton>
+                    <DrawerHeader>
+                    <IconButton 
+    onClick={handleProfileMenuOpen} 
+     sx={{ 
+      justifyContent: "flex-start", 
+        padding: 2 
+   }}
+>
+    <Box 
+        sx={{ 
+            display: 'flex', 
+            flexDirection: "column", 
+            alignItems: 'center', 
+            gap: 1 ,
+            marginTop:1,
+            marginRight:1
+        }}
+    >
+        <Avatar 
+            src={'/images/favicon.png'}  
+            sx={{ 
+                width: 50, 
+                height: 50, 
+                border: "3px solid #fff", 
+                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.2)"
+            }} 
+        />
+         <Typography sx={{ color: '#fff', fontSize: 16, fontWeight: "bold" }}>Issues Tracker</Typography>
+         {/* <ExpandMoreIcon sx={{ color: '#fff' }} />  */}
+    </Box>
+</IconButton>
+    <IconButton onClick={handleDrawerClose} sx={{ color: '#fff' }}>
+        {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+    </IconButton>
                         </DrawerHeader>
                         <Divider />
                         <List>
