@@ -3,7 +3,7 @@ import { getToken } from "./authApi/tokenManager";
 import { clearToken } from "./authApi/tokenManager"; 
 
 const axiosInstance = axios.create({
-  baseURL: "https://ealanatek.site/api/",
+  baseURL: "http://localhost:1337/api/",
   timeout: 10000,
 });
 

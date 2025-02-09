@@ -1,8 +1,13 @@
 const apiEndpoints = {
-  login: "login",
-  logout: "logout",
-  register: "register",
 
+  login: "/auth/local/",
+  logout: "logout",
+  register: "/auth/local/register",
+  fetchIssues: "/issues",
+  createIssue: "/issues",
+  editIssue: "/issues/",
+  getIssueById: "/issues/",
+  deleteIssue: "/issues/",
 };
 
 export default apiEndpoints;

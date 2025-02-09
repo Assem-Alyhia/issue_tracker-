@@ -1,0 +1,192 @@
+.stars-talk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0f0e30;
+    padding: 100px 20px;
+    color: #ffffff;
+
+    .stars-content {
+        width: 40%;
+    text-align: justify;
+        margin-bottom: 30px;
+        margin-left: 50px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+
+        h2 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #c5c7cf;
+            max-width: 100%;
+        }
+    }
+
+    .highlight-button {
+        width: 150px;
+        background: none;
+        border: 1px solid #8b8bff;
+        border-radius: 50px;
+        color: #8b8bff;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: inset 0 0 5px #8b8bff;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .stars-cards {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-left: auto;
+        justify-content: space-evenly;
+        margin-top: 0;
+
+        .star-card {
+        text-align: justify;
+            border-radius: 12px;
+            padding: 20px;
+            width: 25%;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                border: 1px solid #fff;
+                border-radius: 8px;
+                width: 100%;
+                height: auto;
+                display: block;
+                position: relative;
+            }
+
+            .play-button {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 40px;
+                height: 40px;
+                background-color: rgba(0, 122, 255, 0.8);
+                border-radius: 50%;
+                border: none;
+                cursor: pointer;
+                z-index: 1;
+                transition: transform 0.3s ease;
+
+                &::before {
+                    content: "▶";
+                    color: #ffffff;
+                    font-size: 18px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &:hover {
+                    transform: translate(-50%, -50%) scale(1.2);
+                }
+            }
+
+            p {
+                font-size: 14px;
+                color: #ffffff;
+                margin: 15px 0 5px;
+            }
+
+            em {
+                font-size: 14px;
+                font-style: normal;
+                color: #c5c7cf;
+
+                span {
+                    font-size: 12px;
+                    color: #888ab7;
+                }
+            }
+        }
+    }
+
+    .comparison-section {
+        background-color: #1c1838;
+        color: #ffffff;
+        text-align: center;
+        border-radius: 12px;
+        max-width: 1000px;
+        margin: 40px auto;
+        position: relative;
+
+        .comparison-header {
+            position: absolute;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100%;
+
+            h2 {
+                font-size: 36px;
+                font-weight: bold;
+                color: #ffffff;
+                margin-top: 20px;
+            }
+
+            p {
+                color: #c5c7cf;
+                font-size: 14px;
+                margin: 10px 0 30px;
+            }
+        }
+
+        .comparison-table {
+            padding: 0px;
+            display: grid;
+            gap: 1px;
+            background-color: #1c1633;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .table-row {
+                display: grid;
+                grid-template-columns: 1fr repeat(4, 1fr);
+                background-color: #1c1633;
+
+                .table-cell {
+                    padding: 15px;
+                    font-size: 16px;
+                    color: #c5c7cf;
+                    border-right: 1px dashed #ffffff2a;
+                    border-bottom: 1px solid #ffffff2a;
+                    text-align: center;
+
+                    img {
+                        width: 120px;
+                    }
+
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+
+                &.table-header .table-cell {
+                    background-color: #211b37;
+                    color: #68a1ff;
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    background-color: #211b37ed;
+                    transition: background-color 0.5s ease;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,155 @@
+.traderSectionContainer {
+    background-color: #100a28;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    .traderSection {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+
+        .traderCard {
+            background-color: #17152d;
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+        text-align: justify;
+            overflow: hidden;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+            h2 {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+
+            &.traderStarryBackground {
+                display: flex;
+                align-items: center;
+                width: 50%;
+                position: relative;
+
+                canvas#traderStarsCanvas {
+                    position: absolute;
+                    top: -75px;
+                    left: -1450px;
+                    width: 500%;
+                    height: 140%;
+                    z-index: 0;
+                    border-radius: 10px;
+                }
+            }
+
+            &.traderCommunityCard,
+            &.traderSupportCard {
+                width: 25%;
+            }
+
+            .traderContent {
+                position: relative;
+                margin: 1rem 0;
+                z-index: 1;
+            }
+
+            .traderInfo {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                text-align: center;
+
+                div {
+                    padding-left: 1rem;
+                    border-left: 4px solid;
+                    padding-right: 1rem;
+                    span.traderHighlight {
+                        font-size: 26px;
+                        color: #76c7c0;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: #a8a8a8;
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            .traderTextHighlight {
+                font-size: 1.1rem;
+                color: #fff;
+                font-weight: 400;
+            }
+
+            .traderIcons {
+                display: flex;
+                justify-content: space-evenly;
+                gap: 10px;
+                margin-top: 15px;
+
+                img {
+                    width: 40rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {        
+    .section8 {
+        & .feedbackSection-container {
+            & .feedbackSection-cardContainer {
+                .feedbackSection-card {
+                    flex: 0 0 45% !important;
+                }
+            }
+        }
+    }
+}
+
+/* Media Query for devices with width from 769px */
+@media screen and (min-width: 769px) {
+    .section8 {
+        & .feedbackSection-container {
+            & .feedbackSection-cardContainer {
+                .feedbackSection-card {
+                    flex: 0 0 30% !important;
+                }
+            }
+        }
+    }
+
+}
+
+/* Media Query for devices with width from 1024px */
+@media screen and (min-width: 1024px) {
+    .section8 {
+        & .feedbackSection-container {
+            & .feedbackSection-cardContainer {
+                .feedbackSection-card {
+                    flex: 0 0 22% !important;
+                }
+            }
+        }
+    }
+
+}
+@media screen and (min-width: 1200px) { 
+
+}
+

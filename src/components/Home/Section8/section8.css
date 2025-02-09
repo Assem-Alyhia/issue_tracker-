@@ -1,0 +1,186 @@
+    .sectionTableHome {
+        background-color: #0a0520;
+
+        .pricingTable-container {
+            overflow-x: hidden;
+            width: 100%;
+            background: linear-gradient(90deg, #611dba, #1b1777);
+            border-top-left-radius: 9000px;
+            border-top-right-radius: 9000px;
+            padding: 5rem 0;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .pricingTable-header {
+                text-align: center;
+                width: 65%;
+                margin: auto;
+
+                h1 {
+                    color: white;
+                    font-size: 3rem;
+                }
+
+                .pricingTable-list {
+                    border-radius: 60px;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0.4rem;
+                    width: 70%;
+                    margin: 1rem auto;
+                    background-color: #120a38;
+
+                    .pricingTable-btn {
+                        font-size: 1rem;
+                        border-radius: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0.4rem 1rem;
+                        width: 25%;
+                        background-color: #100a36;
+                        color: white;
+                        border: none;
+                        font-weight: bold;
+                        opacity: 0.7;
+
+                        &.selected {
+                            color: black;
+                            background-color: #fff;
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                .pricingTable-preference {
+                    opacity: 0.9;
+                    width: 35%;
+                    margin: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    color: white;
+                    font-size: 1.1rem;
+
+                    form {
+                        width: 50%;
+                        display: flex;
+                        justify-content: space-between;
+                        color: white;
+                    }
+                }
+            }
+            .pricingTable-preference p{
+                width: #fff !important;
+            }
+            .pricingTable-content {
+                font-family: Arial, sans-serif;
+                color: #ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 5rem auto;
+                width: 85%;
+
+                .pricingTable-tableWrapper {
+                    background-color: #1d1e4f;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        padding: 2rem !important;
+
+                        th, td {
+                            font-size: 0.9rem;
+                            padding: 1.5rem 1rem;
+                            text-align: center;
+                        }
+
+                        .pricingTable-headerRow {
+                            background-color: #1d1e4f;
+                            color: #ffffff;
+
+                            td {
+                                font-size: 1.2rem;
+                            }
+                        }
+
+                        tr:nth-child(even) {
+                            background-color: #060b36;
+                        }
+
+                        tr:nth-child(odd) {
+                            background-color: #0b103a;
+                        }
+
+                        .pricingTable-planButton {
+                            background: linear-gradient(0deg, #4e6afb, #4429ff);
+                            color: #ffffff;
+                            font-size: 1.1rem;
+                            text-align: center;
+                            padding: 10px 0;
+                            border-radius: 5px;
+                            text-decoration: none;
+                            flex-wrap: wrap;
+                            font-weight: bold;
+                            display: flex;
+                            justify-content: center;
+
+                            span {
+                                width: 100%;
+                                font-size: 0.8rem;
+                            }
+
+                            &:hover {
+                                background-color: #474bc4;
+                            }
+                        }
+
+                        .check-icon {
+                            color: #595eff;
+                            font-size: 1.2em;
+                        }
+
+                        td.one {
+                            text-align: start;
+                        }
+                    }
+                }
+            }
+
+            .pricingTable-footer {
+                .pricingTable-addonInfo {
+                    opacity: 0.8;
+                    width: 70%;
+                    margin: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    color: white;
+                    font-size: 0.9rem;
+
+                    .pricingTable-addonTitle {
+                        opacity: 1;
+                        font-size: 1rem;
+                    }
+
+                    p {
+                        transition: 1s;
+                        color: white;
+
+                        &:hover {
+                            opacity: 1;
+                            font-size: 1rem;
+                            cursor: pointer;
+                            color: rgb(95, 95, 95);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+

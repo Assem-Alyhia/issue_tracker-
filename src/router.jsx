@@ -14,6 +14,7 @@ import Accounts_ from "./pages/userDashboard/Accounts";
 import Indexissespage from "../src/components/userDashboard/Accounts/Indexissespage";
 import Indexissescard from "./components/userDashboard/Accounts/IndexissesCard";
 
+import Profile_ from "./pages/userDashboard/Profile";
 
 
 
@@ -48,6 +49,10 @@ export const dashboardRoutes = [
    {
     path: "/user/dashboard/issuescard",
     element: <Indexissescard/>,
+  },
+  {
+    path: '/user/dashboard/profile',
+    element: <Profile_ />,
   },
 ]
 

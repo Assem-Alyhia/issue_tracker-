@@ -1,0 +1,384 @@
+.section9 {
+    font-family: Arial, sans-serif;
+    background-color: #0a0520;
+    color: #fff;
+
+    .card1 {
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .globalSection-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+        justify-content: center;
+        
+
+        .globalSection-card {
+            height: 65vh;
+            text-align: left !important;
+            position: relative;
+            width: 90%;
+            max-width: 100%;
+            padding: 2rem 4rem;
+            background-color: #1a1338;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            overflow: hidden;
+        text-align: justify;
+            .globalSection-par {
+                width: 50%;
+                padding: 0;
+
+                span {
+                    font-size: 1.2rem;
+                }
+
+                p {
+                    line-height: 2rem;
+                    font-size: 1em;
+                    opacity: 0.7;
+
+                }
+
+                .globalSection-stats {
+                    margin: 3rem 0 0 0 !important;
+                    font-size: 1.2em;
+                    line-height: 1.5;
+                    display: flex;
+                    gap: 10px;
+                    font-size: 0.9em;
+
+                    div {
+                        text-align: start;
+                        padding-left: 0.7rem;
+                        width: 30%;
+                        border-radius: 5px;
+
+                        span {
+                            opacity: 1;
+                        }
+
+                        p {
+                            font-size: 0.8rem;
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+
+            a {
+                color: #fff;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+        }
+
+        #globalSection-card2 {
+            display: flex;
+
+            .globalSection-paragraph2 {
+                width: 60%;
+                font-size: 1.2em;
+                line-height: 1.5;
+                opacity: 0.7;
+                margin-bottom: 3rem;
+            }
+
+            .globalSection-img {
+                width: 50%;
+                margin: auto;
+                width: 40%;
+
+                img {
+                    width: 90%;
+                    text-align: center;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    .globalSection-title {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+
+        &.h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .globalSection-paragraph {
+        width: 60%;
+        font-size: 1.2em;
+        line-height: 1.5;
+        opacity: 0.7;
+        margin-bottom: 3rem;
+    }
+
+    .globalSection-bottomText {
+        text-align: center;
+        padding: 30px 20px;
+        margin-bottom: 5rem;
+        width: 100%;
+
+        h2 {
+            font-size: 4em;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            opacity: 0.7;
+        }
+
+        .btn {
+            margin: 3rem auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 60%;
+        }
+
+        button {
+            font-size: 1rem;
+            border: none;
+            padding: 1rem 3rem;
+            margin: 5px;
+            color: #fff;
+            font-weight: 900;
+            border-radius: 40px;
+            width: 24%;
+            cursor: pointer;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            &.globalSection-btn1 {
+                width: 48%;
+                background: linear-gradient(90deg, #8953fe, #4f1be1);
+
+                &:hover {
+                    background: linear-gradient(90deg, #4f1be1, #8953fe);
+                }
+            }
+
+            &.globalSection-btn2 {
+                width: 48%;
+                background: linear-gradient(90deg, #27a0ed, #026ae0);
+
+                &:hover {
+                    background: linear-gradient(90deg, #026ae0, #27a0ed);
+                }
+            }
+        }
+    }
+
+    .border-animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 5px solid #8a78f0;
+        border-radius: 10px;
+        pointer-events: none;
+        box-sizing: border-box;
+        animation: borderMoveAlongEdges 5s infinite linear;
+    }
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 1250px) {
+    .globalSection-title {
+        font-size: 3.5rem; 
+    }
+
+    .globalSection-paragraph,
+    .globalSection-paragraph2 {
+        width: 80%;
+        font-size: 1.1em; 
+    }
+
+    .globalSection-bottomText h2 {
+        font-size: 3.5rem;
+    }
+
+    .globalSection-bottomText p {
+        font-size: 1em;
+    }
+
+    .btn {
+        width: 80%;
+    }
+
+    button {
+        font-size: 0.8rem !important; 
+    }
+}
+
+@media (max-width: 768px) {
+    .globalSection-title {
+        font-size: 3rem; 
+    }
+
+    .globalSection-paragraph,
+    .globalSection-paragraph2 {
+        width: 90%;
+        font-size: 1em; 
+    }
+
+    .globalSection-bottomText h2 {
+        font-size: 3rem;
+    }
+
+    .globalSection-bottomText p {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        width: 90%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    button {
+        font-size: 0.85rem;
+        width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .globalSection-title {
+        font-size: 2.5rem; 
+    }
+
+    .globalSection-paragraph,
+    .globalSection-paragraph2 {
+        width: 100%;
+        font-size: 0.9em; 
+    }
+
+    .globalSection-bottomText h2 {
+        font-size: 2.5rem;
+    }
+
+    .globalSection-bottomText p {
+        font-size: 0.8em;
+    }
+
+    .btn {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 0.8rem; 
+        width: 100%; 
+    }
+}
+
+
+
+.btnBlockS7{
+    width: 80%;
+    margin: auto;
+}
+.buttonContainerS7 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #9064ef, #4f1be1);
+    text-align: center;
+    z-index: 10;    
+    cursor: pointer;
+    
+
+    /* padding: 15px 30px; */
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 90%;
+    
+  }
+  
+  .buttonFree{
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    color: #fff;
+  }
+ 
+  .buttonContainerS7:hover  .animatedBackground {
+    content: '';
+    background: conic-gradient(transparent 270deg, rgb(0, 153, 255), transparent);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    animation: rotate 2s linear infinite;
+    z-index: -1;
+  }
+  
+  .innerBlurEffect {
+    content: '';
+    background: rgba(61, 33, 97, 0.61);
+    border-radius: inherit;
+    position: absolute;
+    inset: var(--offset);
+    height: calc(100% - 2 * var(--offset));
+    width: calc(100% - 2 * var(--offset));
+    backdrop-filter: blur(40px);
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+    }
+    to {
+      transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+    }
+  }
+  
+  .textBlockSubtitle {
+    color: #d1d1d1;
+    font-family: Rubik, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+  }
+
+
+  .buttonContainer2{
+    border: 1px solid rgb(61, 33, 97);
+    background: rgba(61, 33, 97, 0.323);
+    
+  }
+  .innerBlurEffect2 {
+    background: none !important;
+  }
+
+  .section9 {
+    & .globalSection-bottomText {
+        .buttonFree2{
+            width: 100%;
+        }
+    }
+}
