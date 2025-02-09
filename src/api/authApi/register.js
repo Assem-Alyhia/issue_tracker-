@@ -3,27 +3,15 @@ import { setToken } from "./tokenManager";
 import apiEndpoints from "./../apiEndpoints";
 
 export const signUp = async (
-  firstname,
-  lastname,
-  email,
   username,
-  phone,
+  email,
   password,
-  password_confirmation,
-  phone_code,
-  country_code
 ) => {
   try {
     const response = await axiosInstance.post(apiEndpoints.register, {
-      firstname,
-      lastname,
-      email,
       username,
-      phone,
+      email,
       password,
-      password_confirmation,
-      phone_code,
-      country_code,
     });
 
     console.log("Sign Up Response:", response.data);

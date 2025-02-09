@@ -9,7 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../api/authApi/LoginApi";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -22,11 +22,11 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const response = await login(username, password);
+      const response = await login(identifier, password);
       console.log("Login Successful:", response);
       navigate("/user/dashboard");
     } catch (err) {
-      setError(err.message || "Invalid username or password.");
+      setError(err.message || "Invalid identifier or password.");
     } finally {
       setLoading(false);
     }
@@ -40,22 +40,22 @@ const Login = () => {
         </div>
 
         <div className="form-section">
-          <div className="logo" style={{ width:"5rem" }}>
+          <div className="logo" style={{ width: "5rem" }}>
             <img src={logo} alt="Logo" />
           </div>
           <div className="divider"></div>
           <form onSubmit={handleSubmit}>
             {error && <div className="error-message">{error}</div>}
             <div className="formInput">
-              <label htmlFor="username">
-                <span>*</span> Username
+              <label htmlFor="identifier">
+                <span>*</span> identifier
               </label>
               <input
                 type="text"
-                id="username"
-                placeholder="Type your username here."
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                id="identifier"
+                placeholder="Type your identifier here."
+                value={identifier}
+                onChange={(e) => setIdentifier(e.target.value)}
                 required
                 style={{ color: '#000' }}
               />
@@ -90,7 +90,7 @@ const Login = () => {
             </div>
             <br />
             <div className="formR">
-              Don't have an account? <Link to="/register">Register</Link>
+              Dont have an account? <Link to="/register">Register</Link>
             </div>
           </form>
         </div>

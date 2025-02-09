@@ -9,17 +9,9 @@ import bg from "/aouthImages/bg-login-top.png";
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
-    email: "",
     username: "",
-    phone: "",
+    email: "",
     password: "11111111",
-    password_confirmation: "11111111",
-    phone_code: "+9077733",
-    country_code: "+90",
-    agreeToTerms: false,
-    agreeToName: false,
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -63,15 +55,10 @@ const Register = () => {
 
     try {
       const response = await signUp(
-        formData.firstname,
-        formData.lastname,
-        formData.email,
         formData.username,
-        formData.phone,
+        formData.email,
         formData.password,
-        formData.password_confirmation,
-        formData.phone_code,
-        formData.country_code
+
       );
 
       if (response) {
@@ -101,26 +88,17 @@ const Register = () => {
           <div className="divider"></div>
 
           <form onSubmit={handleSubmit}>
-            <div className="input-row">
+
+
+          <div className="input-row">
               <div className="input-field">
-                <label htmlFor="first-name"><span>*</span> First Name</label>
+                <label htmlFor="username"><span>*</span> Username</label>
                 <input
                   type="text"
-                  id="first-name"
-                  name="firstname"
-                  placeholder="as per Government ID"
-                  value={formData.firstname}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-field">
-                <label htmlFor="last-name"><span>*</span> Last Name</label>
-                <input
-                  type="text"
-                  id="last-name"
-                  name="lastname"
-                  placeholder="as per Government ID"
-                  value={formData.lastname}
+                  id="username"
+                  name="username"
+                  placeholder="Choose your username"
+                  value={formData.username}
                   onChange={handleInputChange}
                 />
               </div>
@@ -138,44 +116,10 @@ const Register = () => {
                   onChange={handleInputChange}
                 />
               </div>
-              <div className="input-field">
-                <label htmlFor="country"><span>*</span> Country</label>
-                <input
-                  type="text"
-                  id="country"
-                  name="country"
-                  placeholder="as per Government ... "
-                  value="" />
-              </div>
             </div>
 
-            <div className="input-row">
-              <div className="input-field">
-                <label htmlFor="username"><span>*</span> Username</label>
-                <input
-                  type="text"
-                  id="username"
-                  name="username"
-                  placeholder="Choose your username"
-                  value={formData.username}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
 
-            <div className="input-row">
-              <div className="input-field">
-                <label htmlFor="phone"><span>*</span> Phone Number</label>
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  placeholder="Your phone number"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
+
 
             <div className="input-row">
               <div className="input-field">
@@ -191,6 +135,7 @@ const Register = () => {
                   />
                 </div>
               </div>
+
               <div className="input-field">
                 <label htmlFor="confirm-password"><span>*</span> Confirm Password</label>
                 <div className="input-container">
