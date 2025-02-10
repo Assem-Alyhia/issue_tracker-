@@ -11,7 +11,7 @@ const Register = () => {
   const [formData, setFormData] = useState({
     username: "",
     email: "",
-    password: "11111111",
+    password: "",
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -88,8 +88,6 @@ const Register = () => {
           <div className="divider"></div>
 
           <form onSubmit={handleSubmit}>
-
-
           <div className="input-row">
               <div className="input-field">
                 <label htmlFor="username"><span>*</span> Username</label>

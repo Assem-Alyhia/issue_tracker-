@@ -19,16 +19,17 @@ import ListItemText from '@mui/material/ListItemText';
 import { Outlet, useLocation, Link } from 'react-router-dom';
 
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import BuildIcon from '@mui/icons-material/Build';
-import AnnouncementIcon from '@mui/icons-material/Announcement';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; // إضافة رمز السهم السفلي
+// import BuildIcon from '@mui/icons-material/Build';
+// import AnnouncementIcon from '@mui/icons-material/Announcement';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore'; // إضافة رمز السهم السفلي
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+// import { useEffect } from 'react';
 import { ExpandLess, ExpandMore} from '@mui/icons-material';
 import { Collapse} from '@mui/material';
 import { logout } from '../../../api/authApi/logout';
@@ -36,7 +37,7 @@ import Cookies from 'js-cookie';
 import BugReportIcon from "@mui/icons-material/BugReport";  
 import VisibilityIcon from "@mui/icons-material/Visibility"; 
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
-import { Switch } from '@mui/material';
+// import { Switch } from '@mui/material';
 import ColorModeSwitch from '../../../components/ColorModeSwitch';
 
 const drawerWidth = 240;

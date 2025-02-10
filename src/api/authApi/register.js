@@ -27,10 +27,10 @@ export const signUp = async (
   }
 };
 
-export const login = async (username, password) => {
+export const login = async (identifier, password) => {
   try {
     const response = await axiosInstance.post(apiEndpoints.login, {
-      username,
+      identifier,
       password,
     });
     console.log("Login Response:", response.data);

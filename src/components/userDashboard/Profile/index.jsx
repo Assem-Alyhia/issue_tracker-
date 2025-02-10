@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Box, Grid, Avatar, Typography, Button, Hidden } from '@mui/material';
 import PersonalInformation from './PersonalInformation';
 import ChangePassword from './ChangePassword';
 import VerificationCenter from './VerificationCenter';
 import EmailNotifications from './EmailNotifications';
-import profile from '../../../api/userDashboard/profile';
 
 function Profile() {
     const [tabIndex, setTabIndex] = useState(0);
@@ -12,31 +11,11 @@ function Profile() {
         setTabIndex(index);
     };
 
-    const [userData, setUserData] = useState({
-        userFirstName: '',
-        userLastName: '',
-        userEmail: '',
-        userImage: '',
-    });
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const userResponse = await profile.getProfileData();
-                const user = userResponse.data.message;
-                setUserData({
-                    userFirstName: user.userFirstName || '',
-                    userLastName: user.userLastName || '',
-                    userEmail: user.userEmail || '',
-                    userImage: user.userImage || '',
-                });
-            } catch (error) {
-                console.error("Error fetching user data:", error);
-            }
-        };
-
-        fetchData();
-    }, []);
+    const userData = {
+        username: 'john_doe',
+        email: 'john.doe@example.com',
+        userImage: '/userDashboard/Profile/Profile.png'
+    };
 
     return (
         <Box sx={{ padding: { xs: '1rem', sm: '2rem' }, backgroundColor: '#f7f8fc', height: 'auto', minHeight: '90vh' }}>
@@ -51,17 +30,17 @@ function Profile() {
                 <Grid item xs={12} md={3}>
                     <Box display="flex" flexDirection="column" alignItems="center" sx={{ padding: { xs: '1rem', md: 0 } }}>
                         <Avatar
-                            src={userData.userImage ? userData.userImage : '/userDashboard/Profile/Profile.png'}
+                            src={userData.userImage}
                             sx={{ width: { xs: '8rem', sm: '10rem', md: '12rem' }, height: { xs: '8rem', sm: '10rem', md: '12rem' }, marginBottom: '1rem', borderRadius: '30%' }}
                         />
                         <Typography variant="h6" sx={{ textAlign: 'center' }}>
-                            {`${userData.userFirstName} ${userData.userLastName}`}
+                            {userData.username}
                         </Typography>
                         <Button variant="contained" sx={{ marginTop: '1rem' }}>
                             Upload Profile Picture
                         </Button>
                         <Typography variant="body2" color="text.secondary" sx={{ marginTop: '1rem', textAlign: 'center' }}>
-                            {userData.userEmail}
+                            {userData.email}
                         </Typography>
                     </Box>
                 </Grid>
