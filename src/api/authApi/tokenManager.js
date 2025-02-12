@@ -1,6 +1,6 @@
-const TOKEN_KEY = "authToken";  
+const TOKEN_KEY = "jwt";  
 
-export const getToken = () => localStorage.getItem(TOKEN_KEY);  
+export const getToken = () => localStorage.getItem(TOKEN_KEY);
 
 export const setToken = (token) => {
   console.log("Storing Token:", token);  

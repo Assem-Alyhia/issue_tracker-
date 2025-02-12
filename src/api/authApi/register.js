@@ -33,13 +33,14 @@ export const login = async (identifier, password) => {
       identifier,
       password,
     });
-    console.log("Login Response:", response.data);
+    console.log("Login Response:", response.data.jwt);
+    
 
     if (response.data.status === "failed") {
       throw new Error(response.data.message);
     }
 
-    setToken(response.data.token);
+    setToken(response.data.jwt);
     return response.data;
   } catch (error) {
     console.error("Login Error:", error.message);
