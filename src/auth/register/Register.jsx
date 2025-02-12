@@ -65,8 +65,9 @@ const Register = () => {
         if (response.token) {
           localStorage.setItem("userToken", response.token);
         }
+console.log("response",response);
 
-        navigate("/user/dashboard");
+        // navigate("/user/dashboard");
       }
     } catch (error) {
       console.error("Registration failed:", error);

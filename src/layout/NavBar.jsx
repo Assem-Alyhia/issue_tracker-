@@ -27,21 +27,6 @@ const NavBar = () => {
                         <a href="#">About</a>
                       
                     </div>
-                    <div className="unique-dropdown">
-                        <a href="#">Support</a>
-                       
-                    </div>
-                    
-                    <div className="unique-dropdown">
-                        <a href="#">Contact</a>
-                       
-                    </div>
-                    <div className="unique-dropdown">
-                        <a href="#">More ▾</a>
-                        <div className="unique-dropdown-content">
-                            <Link to="/page1">page1</Link>
-                        </div>
-                    </div>
                 </nav>
                 <div className="unique-auth-buttons">
                     <Link to="/login">
@@ -114,5 +99,4 @@ const NavBar = () => {
         </>
     );
 };
-
 export default NavBar;

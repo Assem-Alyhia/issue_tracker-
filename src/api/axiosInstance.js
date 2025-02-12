@@ -3,7 +3,7 @@ import { getToken } from "./authApi/tokenManager";
 import { clearToken } from "./authApi/tokenManager"; 
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:1337/api/",
+  baseURL: "http://localhost:3000/api/",
   timeout: 10000,
 });
 

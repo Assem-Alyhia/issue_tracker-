@@ -70,90 +70,11 @@ const Section1 = () => {
                 <canvas id="space"></canvas>
                 <div className="hero-content-home">
                     <span className="heroSpan">Our Platform Your Success</span>
-                    <h1>issue tracker </h1>
+                    <h1>Welcome to Issue Tracker</h1>
                     <div className="features">
                         <div className="feature-item">
-                            <img
-                                src="/images/profit-split-feature.svg"
-                                alt="Profit Split"
-                            />
-                            <h3>Up to 95%</h3>
-                            <p>of Profit Split</p>
-                        </div>
-                        <div className="feature-item">
-                            <img
-                                src="/images/upto-account-feature.svg"
-                                alt="Account"
-                            />
-                            <h3>Up to $300k</h3>
-                            <p>Trading Accounts</p>
-                        </div>
-                        <div className="feature-item">
-                            <img
-                                src="/images/addons-feature.svg"
-                                alt="Add-ons"
-                            />
-                            <h3>Add-Ons</h3>
-                            <p>to Enhance Trading</p>
-                        </div>
-                        <div className="feature-item">
-                            <img
-                                src="/images/time-limit-feature.svg"
-                                alt="Time Limit"
-                            />
-                            <h3>No time limit</h3>
-                            <p>in Challenge Phase</p>
-                        </div>
-                    </div>
-                    <div className="btn-group">
-                        <div className="btnBlock">
-                            <div className="buttonContainer">
-                                <button className="buttonFree">Start Challenge</button>
-                                <div className="animatedBackground"></div>
-                                <div className="innerBlurEffect"></div>
-                            </div>
-                        </div>
-                        <div className="btnBlock">
-                            <div className="buttonContainer buttonContainer2">
-                                <button className="buttonFree">Free Trial</button>
-                                <div className="animatedBackground"></div>
-                                <div className="innerBlurEffect innerBlurEffect2"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="containerStar">
-                        <div className="trust-section">
-                            <span className=" ">Excellent</span>
-                            <div className="trust-stars">
-                                <div className="cardStar">
-                                    <img src="/images/star.png" alt="Star" />
-                                </div>
-                                <div className="cardStar">
-                                    <img src="/images/star.png" alt="Star" />
-                                </div>
-                                <div className="cardStar">
-                                    <img src="/images/star.png" alt="Star" />
-                                </div>
-                                <div className="cardStar">
-                                    <img src="/images/star.png" alt="Star" />
-                                </div>
-                                <div className="cardStar">
-                                    <img src="/images/star.png" alt="Star" />
-                                </div>
-                                <div className="cardStar">
-                                    <img src="/images/star.png" alt="Star" />
-                                </div>
-                            </div>
-                            <span className="review-count" style={{ fontSize: '0.9rem' }}>
-                                21,653 reviews on
-                            </span>
-                            <span className="trust-logo" style={{ fontSize: '0.9rem' }}>
-                                <img src="/images/star.png" width="20rem" alt="star" />
-                            </span>
-                            <p style={{ fontSize: '0.9rem', color:'#fff'}}>
-                                Trustpilot
-                            </p>
+                            <h2>Welcome to the Smart Issue Management Platform!</h2><br />
+                            <h3>Issue Tracker is an integrated interactive application that helps teams manage issues efficiently and easily. </h3>
                         </div>
                     </div>
 
@@ -162,5 +83,4 @@ const Section1 = () => {
         </>
     );
 }
-
 export default Section1;

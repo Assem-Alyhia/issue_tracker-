@@ -14,19 +14,10 @@ const Footer = () => {
                             <a href="#"><img src="./images/twitter.svg" alt="Twitter"></img></a>
                             <a href="#"><img src="./images/facebook.svg" alt="Facebook"></img></a>
                             <a href="#"><img src="./images/instagram_footer.svg" alt="Instagram"></img></a>
-                            <p>support@FundedMas.com</p>
+                            <p>support@issuetracker.com </p>
                         </div>
                     </div>
                 
-                    <div className="footer-column models">
-                        <h4>Models</h4>
-                        <ul>
-                            <li><a href="#">Express</a></li>
-                            <li><a href="#">Evaluation</a></li>
-                            <li><a href="#">Stellar</a></li>
-                            <li><a href="#">Stellar Lite</a></li>
-                        </ul>
-                    </div>
                 
                     <div className="footer-column education">
                         <h4>Education</h4>
@@ -37,27 +28,6 @@ const Footer = () => {
                             <li><a href="#">Blog</a></li>
                         </ul>
                     </div>
-                
-                    <div className="footer-column community">
-                        <h4>Community</h4>
-                        <ul>
-                            <li><a href="#">Join Local Community</a></li>
-                            <li><a href="#">Join Discord</a></li>
-                            <li><a href="#">Join X</a></li>
-                        </ul>
-                    </div>
-                
-                    <div className="footer-column links">
-                        <h4>Important Links</h4>
-                        <ul>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Affiliate Partner</a></li>
-                            <li><a href="#">Global Events</a></li>
-                            <li><a href="#">Risk Disclosure</a></li>
-                            <li><a href="#">Server Status</a></li>
-                        </ul>
-                    </div>
-                
                     <div className="footer-column privacy">
                         <h4>Privacy & Policy</h4>
                         <ul>

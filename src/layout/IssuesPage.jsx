@@ -18,11 +18,14 @@ import {
   DialogContent,
   DialogTitle,
   IconButton,
+  FormControl,
 } from "@mui/material";
 import { Add, Edit, Delete, AddCircle, RemoveCircle } from "@mui/icons-material";
+import axios from "axios";
+import { Form } from "react-router-dom";
 
 const issuesData = [
-  { id: 1, title: "Fix login bug", description: "Login button does not work", status: "Pending", date: "2025-02-01", imageUrl: "", counter: 0 },
+  { id: 1, title: "Fix login bug", description: "Login button does not work", status: "open", date: "2025-02-01", imageUrl: "", counter: 0 },
   { id: 2, title: "Improve UI design", description: "UI needs improvement", status: "In Progress", date: "2025-01-28", imageUrl: "", counter: 2 },
   { id: 3, title: "Optimize database queries", description: "Optimize database performance", status: "Closed", date: "2025-01-30", imageUrl: "", counter: 5 },
 ];
@@ -32,13 +35,33 @@ const IssuesPage = () => {
   const [filterStatus, setFilterStatus] = useState("");
   const [openAddModal, setOpenAddModal] = useState(false);
   const [editIssue, setEditIssue] = useState(null);
-  const [newIssue, setNewIssue] = useState({
+  // State for the issue form
+  const [issue, setIssue] = useState({
     title: "",
     description: "",
-    status: "",
+    issueStatus: "",
     imageUrl: "",
   });
   const [filteredIssues, setFilteredIssues] = useState(issuesData);
+
+// Handle data on Change
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setIssue({...issue, [name]: value});
+}
+
+// Handle data on Submit
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  console.log("test")
+  try{
+    const res = await axios.post("http://localhost:3000/api/issues", {data: issue});
+    console.log(res);
+  }catch(error){
+    console.log(error);
+  }
+}
+
 
   const handleIncrement = (id) => {
     setFilteredIssues((prevIssues) =>
@@ -63,6 +86,10 @@ const IssuesPage = () => {
       issue.title.toLowerCase().includes(search.toLowerCase()) &&
       (filterStatus ? issue.status === filterStatus : true)
   );
+
+
+
+
 
   return (
     <Box p={3} sx={{ minHeight: "100vh" }}>
@@ -112,8 +139,8 @@ const IssuesPage = () => {
           onChange={(e) => setFilterStatus(e.target.value)}
         >
           <MenuItem value="">All</MenuItem>
-          <MenuItem value="Pending">Pending</MenuItem>
-          <MenuItem value="In Progress">In Progress</MenuItem>
+          <MenuItem value="open">open</MenuItem>
+          <MenuItem value="In-progress">In Progress</MenuItem>
           <MenuItem value="Closed">Closed</MenuItem>
         </TextField>
       </Box>
@@ -145,7 +172,7 @@ const IssuesPage = () => {
   <TableBody>
     {filteredIssuesData.map((issue) => (
       <TableRow key={issue.id}>
-        <TableCell align="center" sx={{ color: "#C0C0C0" }}>{issue.title}</TableCell> {/* بيانات "اسم المشكلة" باللون الفضي */}
+        <TableCell align="center" sx={{ color: "#C0C0C0" }}>{issue.title}</TableCell> 
         <TableCell align="center">
           <Typography sx={{
             fontWeight: "bold",
@@ -153,10 +180,10 @@ const IssuesPage = () => {
               : issue.status === "In Progress" ? "#8A69C4"
               : "#8A69C4",
           }}>
-            {issue.status} {/* بيانات "الحالة" */}
+            {issue.status} 
           </Typography>
         </TableCell>
-        <TableCell align="center" sx={{ color: "#C0C0C0" }}>{issue.date}</TableCell> {/* بيانات "تاريخ الإنشاء" باللون الفضي */}
+        <TableCell align="center" sx={{ color: "#C0C0C0" }}>{issue.date}</TableCell> 
         <TableCell align="center">
           <Box display="flex" justifyContent="center" gap={1}>
             <IconButton sx={{ color: "#8A69C4" }}>
@@ -189,21 +216,26 @@ const IssuesPage = () => {
   <DialogTitle sx={{ bgcolor: "#2C1A58", color: "#FFFFFF" }}>
     Add New Issue
   </DialogTitle>
-  <DialogContent sx={{ color: "#000" }}> {/* إزالة الخلفية السوداء */}
-    <TextField label="Issue Name" variant="outlined" fullWidth margin="normal" />
-    <TextField label="Description" variant="outlined" fullWidth margin="normal" />
-    <TextField select label="Status" variant="outlined" fullWidth margin="normal">
-      <MenuItem value="Pending">Pending</MenuItem>
-      <MenuItem value="In Progress">In Progress</MenuItem>
+  <DialogContent sx={{ color: "#000" }}>
+   <form  onSubmit={handleSubmit}>
+    <TextField label="Issue Name" variant="outlined" fullWidth margin="normal" name="title" value={issue.title} onChange={handleChange} />
+    <TextField label="Description" variant="outlined" fullWidth margin="normal" name="description" value={issue.description} onChange={handleChange} />
+    <TextField select label="Status" variant="outlined" fullWidth margin="normal" name="issueStatus" value={issue.issueStatus} onChange={handleChange}>
+      <MenuItem value="Open">Open</MenuItem>
+      <MenuItem value="-In-progress">In Progress</MenuItem>
       <MenuItem value="Closed">Closed</MenuItem>
     </TextField>
+    <Button sx={{ bgcolor: "#2C1A58", color: "#FFFFFF" }} type="submit" >Add Issue</Button>
+    </form>
   </DialogContent>
+  
   <DialogActions>
     <Button onClick={() => setOpenAddModal(false)} sx={{ color: "#5B2C91" }}>
       Cancel
     </Button>
-    <Button sx={{ bgcolor: "#2C1A58", color: "#FFFFFF" }}>Add Issue</Button>
+   
   </DialogActions>
+ 
 </Dialog>
 
     </Box>
